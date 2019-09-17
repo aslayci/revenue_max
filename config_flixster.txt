@@ -1,0 +1,46 @@
+######## configuration file # all input files should be tab or space separated ########
+
+# cost-sensitive (cs), cost-agnostic (ca), infmax (im), pagerank (pr), degree
+#greedyCriteria : degree
+
+# cost-function type: (l)inear, (r)andom, (u)niform
+costFunctionType : u
+
+# window size : valid for only cost-sensitive, value 0 means no window (so all the nodes are considered), cost-agnostic is 1 by default
+windowSize : 0
+
+# input graph file with p^z_{uv} node ids should be mapped to 0 to n-1
+probGraphFile : input_flixster/Flixster_TIC_FinalGraph_Mapped.txt
+
+# number of nodes 
+n : 28843
+
+# number of edges
+m : 272786
+
+# number of topics
+nrTopics : 10
+
+# number of companies
+nrCompanies : 10
+
+# input advertisers' item distributions file (\gamma^1_i ... \gamma^z_i)
+itemDistsFile : input_flixster/items_10.txt
+
+# advertisers' budgets & cpc file (B_i cpc_i)
+budgetsFile : input_flixster/budgets.txt
+
+# file containing seed user incentive costs as plain spread -- in matrix form (nodeXadvertiser)
+incentiveCostsFile : input_flixster/flixster_cost_matrix_uniform.txt
+
+# output folder for results
+outputFolder : output_flixster_uniform
+
+# epsilon for RIS-Estimation
+epsilon : 0.1
+
+# ell for delta of RIS-Estimation (1 / n^l)
+ell : 1
+
+# alpha for cost multiplication -- it is not advertiser specific
+#alpha : 0.001
